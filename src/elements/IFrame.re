@@ -5,4 +5,4 @@ include AbstractElement.Impl({
     let tagName = "IFRAME";
 });
 
-[@bs.get] external contentWindow : t => Dom.window = "";
+[@get] external contentWindow : t => Dom.window = "";

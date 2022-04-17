@@ -3,6 +3,7 @@ type t('a) = ReDomTypes.element('a);
 let fromDom: Dom.element => t(unit);
 
 let appendChild: (~parent: t(_), ~child: t('child)) => t('child);
+
 let focus: t(_) => unit;
 
 let innerHtml: t(_) => unit;

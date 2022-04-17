@@ -5,4 +5,4 @@ include AbstractElement.Impl({
     let tagName = "INPUT";
 });
 
-[@bs.get] external value : t => string = "";
+[@get] external value : t => string = "";

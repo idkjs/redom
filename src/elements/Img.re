@@ -5,8 +5,8 @@ include AbstractElement.Impl({
     let tagName = "IMG";
 });
 
-[@bs.get] external src : t => string = "";
-[@bs.set] external setSrc : t => string => unit = "src";
+[@get] external src : t => string = "";
+[@set] external setSrc : t => string => unit = "src";
 let setSrc = (loc, elem) => {
     setSrc(elem, loc);
     elem;

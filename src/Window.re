@@ -1,6 +1,6 @@
 type t = Dom.window;
 
-[@bs.val] external window: t = "";
+[@val] external window: t = "";
 let wrap = (f) => (~window=window) => f(window);
 let wrapU = (f) => (~window=window, ()) => f(window);
 
@@ -10,20 +10,20 @@ let set = (~window=window, key, value) =>
 
 type listener = Js.Json.t => unit;
 
-[@bs.send] external alert: t => string => unit = "";
-[@bs.send] external close: t => unit = "";
-[@bs.send] external onLoad:
-    (t, [@bs.as "load"] _, LoadEvent.t => unit) => unit = "addEventListener";
-[@bs.send] external onMessage:
-    (t, [@bs.as "message"] _, listener) => unit = "addEventListener";
-[@bs.get] external opener: t => Js.Nullable.t(t) = "opener";
-[@bs.send] external open_: t => string => string => Js.null(t) = "open";
-[@bs.get] external parent: t => t = "";
-[@bs.send] external postMessage: (t, Js.Json.t, string) => unit = "";
-[@bs.send] external prompt:
+[@send] external alert: t => string => unit = "";
+[@send] external close: t => unit = "";
+[@send] external onLoad:
+    (t, [@as "load"] _, LoadEvent.t => unit) => unit = "addEventListener";
+[@send] external onMessage:
+    (t, [@as "message"] _, listener) => unit = "addEventListener";
+[@get] external opener: t => Js.Nullable.t(t) = "opener";
+[@send] external open_: t => string => string => Js.null(t) = "open";
+[@get] external parent: t => t = "";
+[@send] external postMessage: (t, Js.Json.t, string) => unit = "";
+[@send] external prompt:
     (t, ~message:string=?, ~default:string=?, unit) => Js.null(string) = "prompt";
-[@bs.send] external removeMessageListener:
-    (t, [@bs.as "message"] _, listener) => unit = "removeEventListener";
+[@send] external removeMessageListener:
+    (t, [@as "message"] _, listener) => unit = "removeEventListener";
 
 let alert = wrap(alert);
 let close = wrapU(close);
