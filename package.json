@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Warning: no test specified\"",
-    "build": "npm run clean && bsb -make-world",
-    "watch": "npm run clean && bsb -make-world -w",
-    "clean": "rm -rf lib && (rm .merlin || exit 0) && bsb -clean-world",
+    "build": "npm run clean && rescript",
+    "watch": "npm run clean && rescript build -w",
+    "clean": "rm -rf lib && (rm .merlin || exit 0) && rescript",
     "webpack-test": "webpack -w",
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
@@ -28,12 +28,12 @@
     "url": "git@github.com:ryb73/redom.git"
   },
   "peerDependencies": {
-    "bs-platform": "^9.0.2"
+    "rescript": "^9.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "babel-loader": "^8.2.4",
-    "bs-platform": "^9.0.2",
+    "rescript": "^9.1.4",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
