@@ -27,7 +27,7 @@ let make = (~base=?, url) => make(~url, ~base?);
 
 let immutable = (f) =>
     (v, url) => {
-        let newUrl = href(url) |> make;
+        let newUrl = href(url) |> make(_);
         f(newUrl, v);
         newUrl;
     };

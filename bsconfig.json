@@ -1,28 +1,27 @@
 {
-    "name": "@ryb73/re-dom",
-    "bs-dependencies": [ "decco" ],
-    "sources": [
-        {
-            "dir": "src",
-            "public": [ "ReDom" ],
-        },
-        {
-            "dir": "src/elements",
-            "public": [],
-        },
-        {
-            "dir": "src/events",
-            "public": [],
-        },
-        {
-            "dir": "test",
-            "type": "dev"
-        }
-    ],
-    "refmt": 3,
-    "warnings": {
-        "number": "-105"
+  "name": "@ryb73/re-dom",
+  "bs-dependencies": ["decco"],
+  "sources": [
+    {
+      "dir": "src",
+      "public": ["ReDom"]
     },
-    "ppx-flags": [ "decco/ppx" ],
-    "bsc-flags": [ "-bs-super-errors" ]
+    {
+      "dir": "src/elements",
+      "public": []
+    },
+    {
+      "dir": "src/events",
+      "public": []
+    },
+    {
+      "dir": "test",
+      "type": "dev"
+    }
+  ],
+  "warnings": {
+    "number": "-105-109"
+  },
+  "ppx-flags": ["decco/ppx"],
+  "bsc-flags": ["-bs-super-errors"]
 }

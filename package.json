@@ -28,16 +28,16 @@
     "url": "git@github.com:ryb73/redom.git"
   },
   "peerDependencies": {
-    "bs-platform": "^6.0.1"
+    "bs-platform": "^9.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "babel-loader": "^8.0.6",
-    "bs-platform": "^6.0.1",
+    "@babel/core": "^7.17.9",
+    "babel-loader": "^8.2.4",
+    "bs-platform": "^9.0.2",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "decco": "^1.0.0"
+    "decco": "^1.5.0"
   }
 }
